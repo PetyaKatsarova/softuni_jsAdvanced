@@ -1,8 +1,9 @@
 function greatestCD(num1, num2){
     const biggest = Math.max(num1, num2)
     const smallest = Math.min(num1, num2)
+    let result = 0;
 
-    for(let i=smallest; i>=0; i--){
+    for(let i=smallest; i>0; i--){
         if(biggest % i == 0 && smallest % i == 0){
             console.log(i)
             break
