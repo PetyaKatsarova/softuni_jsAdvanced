@@ -39,7 +39,23 @@
       </ul>
       <p class="copyright">Copyright 2017, Petya Katsarova</p>
     </footer>
-    <script src="arrays-lect-5/exercise/magicMatrices.js"></script>
+    <!-- <script src="arrays-lect-5/exercise/magicMatrices.js"></script> -->
+    <script src="objectClasses/autoEngineering.js"></script>
+    <p>Resize the browser window to fire the <code>resize</code> event.</p>
+    <p>Window height: <span id="height"></span></p>
+    <p>Window width: <span id="width"></span></p>
+    <script>
+        const heightOutput = document.querySelector('#height');
+        const widthOutput = document.querySelector('#width');
+
+        function reportWindowSize() {
+          heightOutput.textContent = window.innerHeight;
+          widthOutput.textContent = window.innerWidth;
+        }
+
+        window.onresize = reportWindowSize;
+        //window.addEventListener('resize', reportWindowSize);
+    </script>
     </body>    
 </html>    
     
