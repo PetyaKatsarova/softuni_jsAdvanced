@@ -1,27 +1,27 @@
-function storeCatalog(arr){
- // order alphabetically
-    let result = {}
+// function storeCatalog(arr){
+//  // order alphabetically
+//     let result = {}
 
-    for(let line of arr){
-        let [name, price] = line.split(' : ')
-        price = Number(price)
-        let letter = name[0]
-        if(!result[letter]){
-            result[letter] = []
-        }
-        result[letter].push([name,price])
+//     for(let line of arr){
+//         let [name, price] = line.split(' : ')
+//         price = Number(price)
+//         let letter = name[0]
+//         if(!result[letter]){
+//             result[letter] = []
+//         }
+//         result[letter].push([name,price])
 
-    }
-    let sortedByLetter = Object.entries(result).sort((a, b)=>a[0].localeCompare(b[0]))
+//     }
+//     let sortedByLetter = Object.entries(result).sort((a, b)=>a[0].localeCompare(b[0]))
     
-    for(let i=0; i<sortedByLetter.length; i++){
-        console.log(sortedByLetter[i][0])
-        let sortByName = sortedByLetter[i][1].sort((a,b)=> a[0].localeCompare(b[0]))
-        sortByName.forEach(el => {
-            console.log(`  ${el[0]}: ${el[1]}`)
-        })
-    }   
-}
+//     for(let i=0; i<sortedByLetter.length; i++){
+//         console.log(sortedByLetter[i][0])
+//         let sortByName = sortedByLetter[i][1].sort((a,b)=> a[0].localeCompare(b[0]))
+//         sortByName.forEach(el => {
+//             console.log(`  ${el[0]}: ${el[1]}`)
+//         })
+//     }   
+// }
 
 storeCatalog([
   'Appricot : 20.4',

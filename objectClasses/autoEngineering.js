@@ -1,17 +1,25 @@
 function autoEngineering(arr){
-    let result = []
+    let obj = {}
 
     for(let line of arr){
-        let obj = {}
         let [brand, model, num] = line.split(' | ')
-        obj['brand'] = brand
-        obj['model'] = model
-        obj['number'] = num
-        result.push(obj)
+        num = Number(num)
+        if(!obj[brand]){
+            obj[brand] = []
+        }
+        obj[brand].push([model,num])        
     }
 
-    for(let line of result){
-        console.log(line)
+    let bla = Object.entries(obj).sort((a,b)=>a[0].localeCompare(b[0]))
+    for(let i=0; i<bla.length; i++){
+        console.log(bla[i][0])
+        let [model,price] = bla[i][1].join(',').split(',')
+        price = Number(price)
+        if(model.length >0){
+            model = model.filter(el => {
+                el 
+            })
+        }
     }
 }
 
@@ -19,10 +27,10 @@ autoEngineering([
     'Mercedes-Benz | 50PS | 123',
     'Mini | Clubman | 20000',
     'Mini | Convertible | 1000',
-    'Mercedes-Benz | 60PS | 3000',
+    'Mercedes-Benz | 50PS | 3000',
     'Hyunday | Elantra GT | 20000',
     'Mini | Countryman | 100',
-    'Mercedes-Benz | W210 | 100',
+    'Mercedes-Benz | 50PS | 100',
     'Mini | Clubman | 1000',
     'Mercedes-Benz | W163 | 200'
   ])
