@@ -3,60 +3,61 @@
   <head>
     
     <meta charset="utf-8">
-    <title>Soft Uni Fundamentals Game</title>
+    <title>Soft Uni JS Advanced Play</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">>
   </head>
-    
-    <body>
-      <form method="post">
-          <!-- <label>Vacantie</label> -->
-          <input type="text" name="vacantie" id="litepicker" />
-      </form>
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Petya Katsarova</li>
-          <li><a href="#home">About me</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li  class="chit-chat"><a href="#values" >Values</a></li>
-        </ul>
-    </div>
-    <header id="values">
-      <!-- <img src="images/petya.jpg" alt="Picture of Petya Katsarova" class="profile-image"> -->
-      <h1 class="tag name">Hello, I’m Petya.</h1>
-      <p class="tag location">You can find me in Dubai, UAE or somewhere around the world, travelling.</p>
-     </header>
-     
-    <div class="js"></div> 
-    
-    <footer>
-      <ul>
-        <li><a href="http://twitter.com/pskpetya" class="social twitter">Twitter</a></li>
-        <li><a href="http://github.com/pskpetya" class="social github">Github</a></li>
+  <body>
+  <div class="main-nav">
+      <ul class="nav">
+        <li class="name">Petya Katsarova</li>
+        <li><a href="#home">About me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li  class="chit-chat"><a href="#values" >Values</a></li>
       </ul>
-      <p class="copyright">Copyright 2017, Petya Katsarova</p>
-    </footer>
-    <!-- <script src="arrays-lect-5/exercise/magicMatrices.js"></script> -->
-    <!-- <script src="objectClasses/storeCatalog.js"></script> -->
-    <script src="objectClasses/systemConponents.js"></script>
-    <p>Resize the browser window to fire the <code>resize</code> event.</p>
-    <p>Window height: <span id="height"></span></p>
-    <p>Window width: <span id="width"></span></p>
-    <script>
-        const heightOutput = document.querySelector('#height');
-        const widthOutput = document.querySelector('#width');
+  </div>
+  <header id="values">
+    <!-- dom lab growingWord -->
+    <div id="exercise">
+      <div id="colors" onclick="growingWord()" style="cursor: pointer;">colors</div>
+      <div></div>
+      <p style="color:blue; font-size: 4px; display:inline-block;" >Growing Word</p>
+    </div>
+    <!-- over dom lab -->
+    <h1 class="tag name">Hello, I’m Petya.</h1>
+    <p class="tag location">You can find me in Dubai, UAE or somewhere around the world, travelling.</p>
+    </header>
+    
+  <div class="js"></div> 
+  
+  <footer>
+    <ul>
+      <li><a href="http://twitter.com/pskpetya" class="social twitter">Twitter</a></li>
+      <li><a href="http://github.com/pskpetya" class="social github">Github</a></li>
+    </ul>
+    <p class="copyright">Copyright 2017, Petya Katsarova</p>
+  </footer>
+  <!-- <script src="arrays-lect-5/exercise/magicMatrices.js"></script> -->
+  <!-- <script src="objectClasses/storeCatalog.js"></script> -->
+  <script src="DOM/lab/growingWord.js"></script>
+  <p>Resize the browser window to fire the <code>resize</code> event.</p>
+  <p>Window height: <span id="height"></span></p>
+  <p>Window width: <span id="width"></span></p>
+  <script>
+      const heightOutput = document.querySelector('#height');
+      const widthOutput = document.querySelector('#width');
 
-        function reportWindowSize() {
-          heightOutput.textContent = window.innerHeight;
-          widthOutput.textContent = window.innerWidth;
-        }
+      function reportWindowSize() {
+        heightOutput.textContent = window.innerHeight;
+        widthOutput.textContent = window.innerWidth;
+      }
 
-        window.onresize = reportWindowSize;
-        //window.addEventListener('resize', reportWindowSize);
-    </script>
-    </body>    
+      window.onresize = reportWindowSize;
+      //window.addEventListener('resize', reportWindowSize);
+  </script>
+  </body>    
 </html>    
     
