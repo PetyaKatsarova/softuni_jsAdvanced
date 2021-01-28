@@ -100,3 +100,6 @@ h1, h2, p {
 #quizzie .answer-wrap:hover {
   background: DarkTurquoise;
 }
+section{
+  cursor: pointer;
+}
