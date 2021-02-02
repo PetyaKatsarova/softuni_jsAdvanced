@@ -39,11 +39,10 @@ button:hover {
     color: #F2614C;
 }
 
-button:disabled,
-button[disabled] {
+/* button:disabled, */
+button[disabled="true"] {
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
-    cursor: no-drop;
-
+    /* cursor: no-drop; */
 }

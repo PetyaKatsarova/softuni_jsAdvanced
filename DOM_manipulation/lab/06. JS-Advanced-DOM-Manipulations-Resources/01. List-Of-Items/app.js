@@ -1,7 +1,17 @@
 function addItem() {
-   
+   //read the text in input 
+   let inpt = document.querySelector('#newItemText')
+   const ul = document.querySelector('#items')
+
+   //create li el and add the inpt value as text
+   let li = document.createElement('li')
+   li.textContent = inpt.value
+   // append that text to a li inisde the html
+   ul.appendChild(li)
+   inpt.value = ''
 }
 
+// play with new staff
 let count = 0
 let buttn = document.querySelector('input[type="button"]')
 
@@ -42,14 +52,14 @@ function onKeyPress(e){
 // example: btn.addEventListener('click', ()=>{
    //passw.removeEventListener('focus', focusEventMyF)
 //})
-let counter = 0
-let intv = setInterval(function(){
-    counter++
-    buttn.click()
-    if(counter > 4){
-        clearInterval(intv)
-        document.getElementsByTagName('body')[0].style.background = "pink"
+// let counter = 0
+// let intv = setInterval(function(){
+//     counter++
+//     buttn.click()
+//     if(counter > 4){
+//         clearInterval(intv)
+//         document.getElementsByTagName('body')[0].style.background = "pink"
         
-    }
-    console.log('2 sec elapsed')
-},2000)
+//     }
+//     console.log('2 sec elapsed')
+// },2000)
