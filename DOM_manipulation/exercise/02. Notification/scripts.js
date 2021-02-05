@@ -1,16 +1,9 @@
-function notify(message) {
-    const divNotification = document.querySelector('#notification')
+function notify(msg) {
+    const note = document.querySelector('#notification')//hidden
     const btn = document.querySelector('button')
-    let intervalId;
-
-    btn.addEventListener('click', ()=>{
-        divNotification.textContent = message
-        divNotification.style.display = 'inline-block'
-let count = 0
-        intervalId = setInterval(function(){
-           divNotification.style.display = 'none'
-           console.log(count++)
-        }, 2000)
-    })
-    clearInterval(intervalId)
+    note.textContent = msg
+    note.style.display = 'block'
+    setTimeout(()=>{
+        note.style.display = 'none'
+    },2000)
 }
