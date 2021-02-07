@@ -12,16 +12,25 @@
 // console.log('-----------------')
 // console.log(so.whatIsThis())
 
-function outer(){
-    console.log(this) // returns the obj{name: 'Pete'}
-    function inner(){
-        console.log(this)// returns Window obj
-        console.log('#############################')
-    }
-    inner()
-}
+// function outer(){
+//     console.log(this) // returns the obj{name: 'Pete'}
+//     function inner(){
+//         console.log(this)// returns Window obj
+//         console.log('#############################')
+//     }
+//     inner()
+// }
+
+
+// object not window
 const obj = {
     name: 'Pete',
     func: outer
 }
-obj.func()
+obj.func()//object {name: 'Pete'}
+//window
+//but
+function outer(){
+    const inner = ()=> console.log(this)
+    inner()
+}
