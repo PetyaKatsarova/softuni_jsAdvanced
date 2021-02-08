@@ -1,8 +1,8 @@
-function arrayMap(func,arr){
-    let bla = arr.reduce((acc,item)=>{
-       acc.push(func(item))
-       return acc
-    },[])
+function arrayMap(arr,func){
+    let bla = arr.reduce((acc,item) => {
+        acc.push(func(item))
+        return acc
+    }, [])
     return bla
 }
 
