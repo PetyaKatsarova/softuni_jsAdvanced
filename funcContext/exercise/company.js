@@ -10,7 +10,9 @@ class Company{
             this.departments[department] = []
         }
         this.departments[department].push({username,salary,position,department})
-        console.log(`New employee is hired. Name: ${username}. Position: ${position}`)
+        //console.log(`New employee is hired. Name: ${username}. Position: ${position}`)
+        return `New employee is hired. Name: ${username}. Position: ${position}`
+
     }
     bestDepartment(){
         let departments = {}
@@ -26,20 +28,20 @@ class Company{
                 bestDepartment = department
             }
         })
-        console.log(`Best department is: ${bestDepartment}`)
-        console.log(`Average salary: ${maxSalary.toFixed(2)}`)
+        let output = `Best department is: ${bestDepartment}\n`
+        output += `Average salary: ${maxSalary.toFixed(2)}\n`
         this.departments[bestDepartment]
         .sort((a,b)=> b.salary - a.salary || a.username.localeCompare(b.username))
         .forEach(employee => {
-          //  {employee1} {salary} {position}
-            console.log(`${employee.username} ${employee.salary} ${employee.position}`)
+            output += `${employee.username} ${employee.salary} ${employee.position}\n`
         })
-        
+        // it still gives 50%
+        return output.trim()
     }
 
     validate(value){
         if(!value || value < 0){
-            throw new Error('Invalid input')
+            throw new Error('Invalid input!')
         }
     }
 }
@@ -51,7 +53,7 @@ c.addEmployee("Stan", 2000, "architect", "Construction");
 c.addEmployee("Stanimir", 1200, "digital marketing manager", "Marketing");
 c.addEmployee("Pesho", 1000, "graphical designer", "Marketing");
 c.addEmployee("Gosho", 1350, "HR", "Human resources");
-c.bestDepartment();
+console.log(c.bestDepartment());
 // Best department is: {best department's name}
 // Average salary: {best department's average salary}
 // {employee1} {salary} {position}
