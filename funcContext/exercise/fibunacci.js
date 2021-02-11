@@ -39,4 +39,3 @@ function getFib(){
     console.log(bla())
     console.log(bla())
     console.log(bla())
-//
